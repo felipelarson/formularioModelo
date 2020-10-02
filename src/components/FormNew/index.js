@@ -13,8 +13,8 @@ const FormNew = () => {
   });
 
 
-  const newUser = (user) => {
-    console.log(user);
+  const newUser = (data) => {
+    console.log(data);
   };
 
   return (
@@ -23,6 +23,8 @@ const FormNew = () => {
       <p>{errors.name?.message}</p>
       <Field.Text label="Email" name="email" type="email" register={register} />
       <p>{errors.email?.message}</p>
+      <Field.Text label="Endereco" name="endereco" type="text" register={register} />
+      <p>{errors.endereco?.message}</p>
       <Button>Enviar</Button>
     </Form>
   );

@@ -9,6 +9,10 @@ const schema = yup.object().shape({
     .string()
     .email("Digite um email valido")
     .required("Email e obrigatorio"),
+  endereco: yup
+    .string()
+    .min(2, "minimo 2 caracteres")
+    .required("Endereco e obrigatorio"),
 });
 
 export default schema;
